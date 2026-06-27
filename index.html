@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>End-to-End ABCD from Natural Language</title>
+  <title>End-to-End Abstraction-Based Control with LLM-Enhanced NL-to-LTL Translation</title>
 
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
@@ -111,7 +111,7 @@
     <div class="container has-text-centered">
 
       <h1 class="title is-2">
-        End-to-End Abstraction-Based Control from Natural Language<br>
+        End-to-End Abstraction-Based Control<br>
         with LLM-Enhanced NL-to-LTL Translation
       </h1>
 
@@ -175,27 +175,35 @@
   <div class="content-wrapper">
     <h2 class="title is-3">Abstract</h2>
     <p>
-      Abstraction-Based Controller Design (ABCD) offers a principled framework for
-      the safe control of complex Cyber-Physical Systems (CPSs), but interfacing
-      real-world requirements with its formal synthesis machinery remains a major
-      bottleneck. In practice, such requirements are most naturally expressed in
-      Natural Language (NL), whereas ABCD requires formal specifications such as
-      Linear Temporal Logic (LTL).
+      Abstraction-Based Controller Design (ABCD) offers a principled framework
+      for the safe control of complex Cyber-Physical Systems (CPSs), but
+      interfacing real-world requirements with its formal synthesis machinery
+      remains a major bottleneck: such requirements are most naturally expressed
+      in Natural Language (NL), whereas ABCD requires formal specifications such
+      as Linear Temporal Logic (LTL). Large Language Models (LLMs) offer a
+      promising way to bridge this gap by translating NL requirements into formal
+      specifications.
     </p>
 
     <p>
-      This paper presents an LLM-enhanced pipeline for ABCD, in which NL
-      requirements are translated into LTL and used within a formal synthesis
-      workflow. We implement the pipeline in <code>Dionysos.jl</code> and introduce
-      a benchmark for evaluating lifted NL-to-LTL translation under both logical
-      diversity and linguistic variation.
+      This paper makes three contributions. First, we formalize an LLM-enhanced
+      pipeline for ABCD, in which NL requirements are translated into LTL and
+      used within a formal synthesis workflow. Second, we implement this pipeline
+      in the <code>Dionysos</code> toolbox and introduce a benchmark for
+      evaluating NL-to-LTL translation under both logical diversity and
+      linguistic variation.
     </p>
 
     <p>
-      Experiments with state-of-the-art LLMs show that translation accuracy
-      degrades systematically with the complexity of the target specification,
-      measured by AST size and temporal depth. These results reveal a scaling
-      relationship between LLM success rate and LTL formula complexity.
+      Third, through experiments with state-of-the-art LLMs, we show that
+      translation accuracy degrades systematically as the target specifications
+      become more complex, across several measures including Abstract Syntax Tree
+      (AST) size, temporal depth, and Büchi automaton size, while also accounting
+      for the length of the NL input. These results reveal a scaling law that
+      links LLM success rate to the intrinsic complexity of the underlying LTL
+      formula. Together, these contributions provide both an evaluation framework
+      and a practical integration pathway for making ABCD more accessible while
+      preserving the rigor of formal methods.
     </p>
   </div>
 </section>
