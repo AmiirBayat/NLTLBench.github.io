@@ -57,6 +57,27 @@
       border: 1px solid #ddd;
     }
 
+    .video-container {
+      position: relative;
+      width: 100%;
+      max-width: 900px;
+      margin: 2rem auto 0 auto;
+      padding-bottom: 56.25%;
+      height: 0;
+      overflow: hidden;
+      border-radius: 10px;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+    }
+
+    .video-container iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+
     .caption {
       font-size: 0.95rem;
       color: #555;
@@ -95,12 +116,14 @@
       </h1>
 
       <div class="author-block">
-        <a href="#">Amir Bayat</a><sup>1</sup>,
-        <a href="#">Raphaël M. Jungers</a><sup>1</sup>
+        <a href="#">Amir Bayat</a><sup>*</sup>,
+        <a href="#">Necmiye Ozay</a>,
+        <a href="#">Alessandro Abate</a>,
+        <a href="#">Raphaël M. Jungers</a>
       </div>
 
       <div class="is-size-6 mt-2">
-        <sup>1</sup>ICTEAM, UCLouvain, Louvain-la-Neuve, Belgium
+        <sup>*</sup>ICTEAM, UCLouvain, Louvain-la-Neuve, Belgium
       </div>
 
       <div class="mt-4">
@@ -124,10 +147,19 @@
           <span>Benchmark</span>
         </a>
 
-        <a class="button is-dark" href="#">
+        <a class="button is-danger" href="https://youtu.be/X5sc8U-o7RI" target="_blank">
           <span class="icon"><i class="fab fa-youtube"></i></span>
           <span>Video</span>
         </a>
+      </div>
+
+      <div class="video-container">
+        <iframe
+          src="https://www.youtube.com/embed/X5sc8U-o7RI"
+          title="Interactive Controller Design from Natural-Language Specifications"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen>
+        </iframe>
       </div>
 
     </div>
@@ -324,25 +356,6 @@
       <div class="caption">
         Interactive NL interface for ABCD synthesis.
       </div>
-    </div>
-  </div>
-</section>
-
-<section class="section has-background-light">
-  <div class="content-wrapper">
-    <h2 class="title is-3">Video</h2>
-
-    <p>
-      A demonstration video will be added here.
-    </p>
-
-    <div class="figure">
-      <iframe width="800" height="450"
-        src="https://www.youtube.com/embed/VIDEO_ID"
-        title="Demo video"
-        frameborder="0"
-        allowfullscreen>
-      </iframe>
     </div>
   </div>
 </section>
